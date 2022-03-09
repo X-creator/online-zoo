@@ -1,0 +1,502 @@
+.map {
+    padding-top: 80px;
+    height: 1019px;
+    position: relative;
+    overflow: hidden;
+    background: #eaf7fe;
+}
+
+.map-bg__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: grab;
+    width: 300%;
+    height: 300%;
+    left: -100%;
+    top: -100%;
+}
+
+.map-bg__wrapper:active {
+    cursor: grabbing;
+}
+
+.map-bg {
+    position: relative;
+    height: 1019px;
+    width: 1086px;
+    background: url("../../assets/images/map.svg") no-repeat left 4px bottom 119px / auto;
+}
+
+.map-animals__img {
+    max-width: 100%;
+    display: block;
+}
+
+.map-animals__tooltip {
+    padding: 7px 9px;
+    position: absolute;
+    width: 159px;
+    height: 109px;
+    border: 1px solid #000;
+    background: #fff;
+    border-radius: 5px;
+    display: none;
+}
+
+.map-animals__tooltip::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000;
+    border-right: transparent;
+    border-bottom: transparent;
+    background: #fff;
+    transform: rotate(45deg) skew(15deg, 15deg);
+}
+
+.map-animals__tooltip-text {
+    line-height: 140%;
+    margin-bottom: 11px;
+}
+
+.map-animals__tooltip-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 137px;
+    height: 31px;
+    color: #4b9200;
+    background: #f1f3f2;
+    border-radius: 5px;
+}
+
+.map-animals__tooltip-1 {
+    top: 61%;
+    left: 7%;
+}
+
+.map-animals__tooltip-2 {
+    top: 61.7%;
+    left: 21.5%;
+}
+
+.map-animals__tooltip-3 {
+    top: 72.4%;
+    left: 47%;
+}
+
+.map-animals__tooltip-4 {
+    top: 62%;
+    left: 73%;
+}
+
+
+.map-animals__item-1 {
+    position: absolute;
+    left: 8.8%;
+    top: 54.2%;
+    width: 44px;
+}
+
+.map-animals__item-1:hover + .map-animals-pin::after,
+.map-animals__item-1.active + .map-animals-pin::after {
+    z-index: 0;
+}
+
+.map-animals__item-1:hover + .map-animals-pin + .map-animals__tooltip-1,
+.map-animals__item-1.active + .map-animals-pin + .map-animals__tooltip-1 {
+    display: block;
+}
+
+.map-animals-pin::before {
+    position: absolute;
+    content: url("../../assets/icons/pin.svg");
+}
+
+.map-animals-pin::after {
+    position: absolute;
+    z-index: -1;
+    transition: 0.2s;
+    content: url("../../assets/icons/pin-over.svg");
+}
+
+.map-animals__item-2 {
+    position: absolute;
+    left: 12%;
+    top: 57.6%;
+    width: 50px;
+}
+
+.map-animals__item-2::before,
+.map-animals__item-2::after {
+    top: -41px;
+    left: 10px;
+}
+
+.map-animals__item-3 {
+    position: absolute;
+    left: 23%;
+    top: 59%;
+    width: 75px;
+}
+
+.map-animals__item-3::before,
+.map-animals__item-3::after {
+    top: -38px;
+    left: 7px;
+}
+
+.map-animals__item-4 {
+    position: absolute;
+    left: 50.4%;
+    top: 67.3%;
+    width: 50px;
+}
+
+.map-animals__item-4::before,
+.map-animals__item-4::after {
+    top: -37px;
+    left: -1px;
+}
+
+.map-animals__item-5 {
+    position: absolute;
+    left: 75.6%;
+    top: 50%;
+    width: 37px;
+}
+
+.map-animals__item-5::before,
+.map-animals__item-5::after {
+    top: 7px;
+    left: 37px;
+}
+
+.map-animals__item-5:hover + .map-animals-pin + .map-animals__tooltip-4,
+.map-animals__item-5.active + .map-animals-pin + .map-animals__tooltip-4 {
+    display: block;
+}
+
+.map-animals__item-6 {
+    position: absolute;
+    left: 75%;
+    top: 56.7%;
+    width: 46px;
+}
+
+.map-animals__item-6::before,
+.map-animals__item-6::after {
+    top: -13px;
+    left: 39px;
+}
+
+.map-animals-pin:hover::after,
+.map-animals-pin:focus::after,
+.map-animals-pin.active::after {
+    z-index: 0;
+}
+
+.map-animals-pin:hover + .map-animals__tooltip,
+.map-animals-pin:focus + .map-animals__tooltip,
+.map-animals-pin.active + .map-animals__tooltip {
+    display: block;
+}
+
+.map-control {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+}
+
+.map-control__btn-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.map-control__btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 5px;
+    transition: 0.2s;
+    background: #fff;
+}
+
+.map-control__btn:hover {
+    border: 1px solid #4b9200;
+}
+
+.map-control__btn:hover .map-control__btn-icon {
+    fill: #4b9200;
+    transition: 0.2s;
+}
+
+.footer__link {
+    margin: 35px 0 49px;
+}
+
+@media (max-width: 1599px) {
+
+    .map {
+        height: 828px;
+    }
+
+    .map-bg {
+        height: 828px;
+        width: 980px;
+        background: url("../../assets/images/map.svg") no-repeat left 23px bottom 38px / 940px;
+    }
+
+    .map-animals-pin::before,
+    .map-animals-pin::after {
+        transform: scale(0.9);
+    }
+
+
+    .map-animals__item-1 {
+        left: 10.5%;
+        top: 59%;
+        width: 38px;
+    }
+
+    .map-animals-pin {
+        transform: scale(0.88);
+    }
+
+    .map-animals__item-2 {
+        left: 13.2%;
+        top: 62.5%;
+    }
+
+    .map-animals__tooltip-1 {
+        top: 66%;
+        left: 8%;
+    }
+
+    .map-animals__item-3 {
+        left: 23.5%;
+        top: 64%;
+    }
+
+    .map-animals__tooltip-2 {
+        top: 67.2%;
+    }
+
+    .map-animals__item-4 {
+        left: 50%;
+        top: 72.7%;
+    }
+
+    .map-animals__tooltip-3 {
+        top: 79.4%;
+    }
+
+    .map-animals__item-5 {
+        left: 74.3%;
+        top: 54.4%;
+    }
+
+    .map-animals__item-6 {
+        left: 73.6%;
+        top: 61.5%;
+    }
+
+    .map-animals__tooltip-4 {
+        top: 68%;
+        left: 70%;
+    }
+
+    .map-control {
+        display: flex;
+        top: 0;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .map-control__btn-wrapper {
+        align-self: flex-end;
+        position: sticky;
+        bottom: 20px;
+    }
+
+    .footer__wrapper {
+        padding-left: 0;
+    }
+
+    .footer__top {
+        padding-right: 33px;
+    }
+
+    .footer__social {
+        margin-right: 118px;
+    }
+}
+
+@media (max-width: 999px) {
+    .map {
+        padding-top: 34px;
+        height: 508px;
+    }
+
+    .map-bg {
+        height: 475px;
+        width: 620px;
+        background: url("../../assets/images/map.svg") no-repeat left 14px bottom 8px / 596px;
+    }
+
+    .map-animals__item-1 {
+        top: 58%;
+        width: 25px;
+    }
+
+    .map-animals-pin {
+        transform: scale(0.57);
+    }
+
+    .map-animals__item-2 {
+        left: 11.6%;
+        top: 61%;
+    }
+
+    .map-animals__tooltip-1 {
+        top: 67%;
+        left: 5%;
+    }
+
+    .map-animals__item-3 {
+        left: 21.3%;
+        top: 63%;
+    }
+
+    .map-animals__tooltip-2 {
+        left: 18.5%;
+        top: 68.2%;
+    }
+
+    .map-animals__item-4 {
+        left: 48.5%;
+        top: 71.5%;
+    }
+
+    .map-animals__tooltip-3 {
+        left: 44%;
+        top: 80.4%;
+    }
+
+    .map-animals__item-5 {
+        left: 73.3%;
+        top: 51.2%;
+    }
+
+    .map-animals__item-6 {
+        left: 72.2%;
+        top: 59%;
+    }
+
+    .map-animals__tooltip-4 {
+        top: 69%;
+        left: 67%;
+    }
+
+    .map-control {
+        display: none;
+    }
+
+    .footer__social {
+        margin-right: 0;
+    }
+
+    .footer__link {
+        margin: 32px 0 57px;
+    }
+}
+
+@media (max-width: 639px) {
+
+    .map {
+        height: 358px;
+    }
+
+    .map-bg__wrapper {
+        width: 312%;
+    }
+
+    .map-bg {
+        height: 337px;
+        width: 428px;
+        background: url("../../assets/images/map.svg") no-repeat left 7px bottom 6px  / 408px;
+    }
+
+    .map-animals-pin::before,
+    .map-animals-pin::after {
+        transform: scale(0.9);
+    }
+
+    .map-animals__item-1 {
+        top: 59.1%;
+        left: 10.2%;
+        width: 17px;
+    }
+
+    .map-animals-pin {
+        transform: scale(0.4);
+    }
+
+    .map-animals__item-2 {
+        left: 9.5%;
+        top: 61.4%;
+    }
+
+    .map-animals__tooltip-1 {
+        top: 69%;
+        left: 1%;
+    }
+
+    .map-animals__item-3 {
+        left: 17.6%;
+    }
+
+    .map-animals__tooltip-2 {
+        left: 14%;
+        top: 70.2%;
+    }
+
+    .map-animals__item-4 {
+        top: 70.5%;
+        left: 46%;
+    }
+
+    .map-animals__tooltip-3 {
+        left: 39%;
+        top: 82.4%;
+    }
+
+    .map-animals__item-5 {
+        left: 70.5%;
+        top: 50.2%;
+    }
+
+    .map-animals__item-6 {
+        left: 69.5%;
+        top: 58.5%;
+    }
+
+    .map-animals__tooltip-4 {
+        top: 71%;
+        left: 62%;
+    }
+
+    .footer__top {
+        padding-right: 0;
+    }
+
+    .footer__link {
+        margin: 0 0 129px;
+    }
+}
+

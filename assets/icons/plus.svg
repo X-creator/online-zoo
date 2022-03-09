@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"
+     xmlns:v="https://vecta.io/nano">
+    <path d="M16 0a3 3 0 0 0-3 3v10H3a3 3 0 1 0 0 6h10v10a3 3 0 1 0 6 0V19h10a3 3 0 1 0 0-6H19V3a3 3 0 0 0-3-3z"
+          fill="#333b41"/>
+</svg>

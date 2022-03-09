@@ -1,0 +1,689 @@
+.sidebar-wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 192px;
+    left: 30px;
+    bottom: 1020px;
+}
+
+.sidebar {
+    top: 30px;
+    left: 30px;
+    bottom: 50px;
+    position: sticky;
+    padding: 16px 9px;
+    width: 99px;
+    height: 652px;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+    border-radius: 5px;
+}
+
+.pick-animal {
+    display: flex;
+    flex-direction: column;
+}
+
+.pick-animal__item {
+    position: relative;
+}
+
+.pick-animal__link,
+.pick-animal__btn {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #f9804b;
+    background: #fff;
+    transition: 0.2s ease-out;
+}
+
+.pick-animal__btn {
+    cursor: pointer;
+    position: relative;
+}
+
+.pick-animal__btn::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    bottom: 7px;
+    left: 7px;
+    right: 7px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.pick-animal__btn .pick-animal__icon,
+.pick-animal__link .pick-animal__icon {
+    transition: 0.2s ease-in;
+}
+
+.pick-animal__link.active,
+.pick-animal__link:hover,
+.pick-animal__btn:hover {
+    border: 2px solid #4b9200;
+}
+
+.pick-animal__link.active .pick-animal__icon,
+.pick-animal__link:hover .pick-animal__icon,
+.pick-animal__btn:hover .pick-animal__icon {
+    fill: #4b9200;
+}
+
+.pick-animal__label {
+    width: 80px;
+    right: -89px;
+    padding: 10px;
+    position: absolute;
+    background: #decbc9;
+    border: 1px dashed #000;
+    border-right: solid;
+    border-left: solid;
+    top: 20px;
+    font-weight: 300;
+    opacity: 0;
+    transition: 0.2s ease-in;
+}
+
+/*.pick-animal__link.active + .pick-animal__label,*/
+.pick-animal__link:hover + .pick-animal__label {
+    opacity: 1;
+}
+
+.main {
+    position: relative;
+    padding: 120px 0 100px;
+}
+
+.animal-camera {
+    margin-bottom: 60px;
+}
+
+.animal-camera__title {
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 120%;
+    color: #333B41;
+    margin-bottom: 15px;
+}
+
+.animal-camera__online-wrapper {
+    height: 652px;
+    margin-bottom: 80px;
+}
+
+.animal-camera__preview {
+    width: max-content;
+    height: 210px;
+    display: flex;
+    gap: 30px;
+}
+
+.animal-camera__preview-item {
+    flex: 0 0 268px;
+    cursor: pointer;
+    position: relative;
+}
+
+.animal-camera__preview-item::before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    position: absolute;
+}
+
+.animal-camera__preview-item::after {
+    position: absolute;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: 'live';
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #000;
+    width: 55px;
+    height: 24px;
+    left: 9px;
+    top: 9px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+.footer__link {
+    margin: 35px 0 49px;
+}
+
+@media (max-width: 1599px) {
+    .sidebar-wrapper {
+        top: 172px;
+        height: 710px;
+    }
+
+    .sidebar {
+        width: 72px;
+        height: 438px;
+        padding: 7px 10px;
+    }
+
+
+    .pick-animal__link,
+    .pick-animal__btn {
+        width: 52px;
+        height: 52px;
+    }
+
+    .pick-animal__icon {
+        transform: scale(0.7);
+    }
+
+    .main {
+        padding: 100px 0 100px;
+    }
+
+    .animal-camera {
+        width: 838px;
+        margin: 0 0 20px auto;
+    }
+
+    .animal-camera__online-wrapper {
+        height: 438px;
+        margin-bottom: 60px;
+    }
+
+    .animal-camera__wrapper {
+        width: 616px;
+        overflow: hidden;
+    }
+
+    /*.animal-camera__preview-item:nth-child(2) ~ .animal-camera__preview-item {*/
+    /*    display: none;*/
+    /*}*/
+    .animal-camera__preview-item {
+        flex: 0 0 293px;
+    }
+
+    .prev-btn {
+        left: 646px;
+        margin-top: 30px;
+    }
+
+    .next-btn {
+        left: 646px;
+        margin-top: -42px;
+    }
+}
+
+@media (max-width: 999px) {
+    .sidebar-wrapper {
+        top: 111px;
+        left: 20px;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .main {
+        padding: 56px 0 107px;
+    }
+
+    .animal-camera {
+        width: 535px;
+    }
+
+    .animal-camera__title {
+        font-size: 36px;
+        margin-bottom: 12px;
+    }
+
+    .animal-camera__online-wrapper {
+        height: 278px;
+        margin-bottom: 20px;
+    }
+
+    .animal-camera__preview {
+        height: 140px;
+    }
+
+    .animal-camera__preview-item {
+        width: 180px;
+    }
+
+    .slider-control {
+        transform: scale(0.7);
+    }
+
+    .prev-btn {
+        left: 411px;
+        margin-top: -5px;
+    }
+
+    .next-btn {
+        left: 411px;
+        margin-top: -56px;
+    }
+}
+
+@media (max-width: 639px) {
+    .sidebar-wrapper {
+        top: 281px;
+        left: 10px;
+    }
+
+    .sidebar {
+        width: 62px;
+        height: 233px;
+        padding: 5px 5px;
+    }
+
+    /*.pick-animal__item:nth-child(3) ~ .pick-animal__item:not(:last-child) {*/
+    /*    display: none;*/
+    /*}*/
+    .pick-animal__link, .pick-animal__btn {
+        margin-bottom: 5px;
+    }
+
+    .pick-animal__btn:before {
+        display: none;
+    }
+
+    .main {
+        padding: 55px 0 41px;
+    }
+
+    .animal-camera {
+        width: 320px;
+        margin: 0 0 20px 0;
+    }
+
+    .animal-camera__title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .animal-camera__online-wrapper {
+        height: 168px;
+    }
+
+    .animal-camera__preview {
+        gap: 10px;
+        width: 189px;
+        flex-wrap: wrap;
+    }
+
+    .animal-camera__preview-item:nth-child(2) ~ .animal-camera__preview-item {
+        display: block;
+    }
+
+    .animal-camera__preview-item {
+        width: 89px;
+        height: 69px;
+    }
+
+    .slider {
+        margin-left: 83px;
+    }
+
+    .slider-control {
+        display: none;
+    }
+}
+
+.information {
+    padding: 80px 0;
+}
+
+.animal__name {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 120%;
+    color: #4B9200;
+}
+
+.animal-card {
+    display: flex;
+    padding: 25px 0 16px;
+    border-bottom: 1px solid #767474;
+}
+
+.animal-card__img-wrapper {
+    margin-right: 70px;
+}
+
+.animal-card__img {
+    width: 422px;
+}
+
+.animal-card__info {
+    display: flex;
+    flex-direction: column;
+}
+
+.animal-card__info .main-link {
+    margin-left: 4px;
+}
+
+.animal-card__text {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+    color: #ababab;
+    margin-bottom: 41px;
+}
+
+.info-link {
+    color: #4b9200;
+}
+
+.info-link:hover {
+    color: #f9804b;
+}
+
+.about-short {
+    padding: 42px 0 0;
+}
+
+.about-short__info {
+    display: flex;
+    align-items: baseline;
+}
+
+.animal__info-title {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 120%;
+    color: #000;
+    margin: 0 10px 20px 0;
+}
+
+.about-short .habitat {
+    margin: 10px 10px 0 0;
+}
+
+.habitat + .animal__info-text {
+    margin: 0;
+}
+
+.animal__info-text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.about-long {
+    padding-bottom: 21px;
+}
+
+.spoiler {
+    position: relative;
+    height: 110px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.spoiler::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(360deg, #fff -13.95%, rgba(255, 248, 248, 0) 88.37%);
+}
+
+.about-long .animal__info-title {
+    margin: 30px 10px 11px 0;
+}
+
+.animal__info-btn {
+    width: 129px;
+    height: 42px;
+    background: #f1f3f2;
+    border: 1px solid #333b41;
+    border-radius: 5px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.animal__info-btn:hover {
+    color: #4b9200;
+    border: 1px solid #4b9200;
+}
+
+.main__img-1 {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 306px;
+    transform: scale(-1, 1);
+}
+
+.main__img-2 {
+    z-index: -1;
+    position: absolute;
+    bottom: -129px;
+    right: -116px;
+    width: 366px;
+    transform: rotate(336deg);
+}
+
+@media (max-width: 1599px) {
+    .information {
+        padding: 80px 0 40px;
+    }
+
+    .animal-card {
+        display: flex;
+        padding: 25px 0 16px;
+        border-bottom: none;
+    }
+
+    .animal-card__img-wrapper {
+        margin-right: 30px;
+    }
+
+    .animal-card__img {
+        width: 455px;
+        height: 458px;
+    }
+
+    .animal-card__info {
+        height: 454px;
+        justify-content: space-between;
+    }
+
+    .animal-card__text {
+        font-size: 22px;
+        line-height: 141%;
+        margin-bottom: 14px;
+    }
+
+    .animal-card__info .main-link {
+        margin-left: 0;
+    }
+
+    .about-short {
+        padding: 45px 0 0;
+    }
+
+    .main__img-1 {
+        width: 186px;
+    }
+
+    .main__img-2 {
+        bottom: -110px;
+        right: -111px;
+        width: 309px;
+    }
+}
+
+@media (max-width: 999px) {
+    .information {
+        padding: 40px 0 40px;
+    }
+
+    .animal__name {
+        text-align: center;
+    }
+
+    .animal-card {
+        padding: 21px 0 16px;
+        flex-direction: column;
+    }
+
+    .animal-card__img-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .animal-card__img {
+        width: 390px;
+        height: 393px;
+    }
+
+    .animal-card__info {
+        width: 420px;
+    }
+
+    .animal-card__info .main-link {
+        position: relative;
+        left: 50%;
+        transform: translate(-20%, -42%);
+    }
+
+    .about-short {
+        padding: 22px 0 0;
+    }
+
+    .main__img-1 {
+        width: 143px;
+    }
+
+    .main__img-2 {
+        bottom: -89px;
+        right: -69px;
+        width: 215px;
+    }
+}
+
+@media (max-width: 639px) {
+    .information {
+        padding: 48px 0 40px;
+    }
+
+    .animal__name {
+        font-size: 24px;
+    }
+
+    .animal-card {
+        padding: 10px 0 16px;
+
+    }
+
+    .animal-card__img-wrapper {
+        overflow: hidden;
+        width: 320px;
+        height: 193px;
+        margin-left: -10px;
+        margin-bottom: 20px;
+    }
+
+    .animal-card__img {
+        bottom: 38px;
+        position: relative;
+        width: 320px;
+        height: 326px;
+    }
+
+    .animal-card__info {
+        width: 303px;
+        height: 348px;
+    }
+
+    .animal-card__text {
+        font-size: 16px;
+    }
+
+    .animal-card__info .main-link {
+        transform: translateX(-50%);
+    }
+
+    .about-short {
+
+    }
+
+    .main__img-1 {
+        width: 84px;
+    }
+
+    .main__img-2 {
+        bottom: -38px;
+        right: -43px;
+        width: 118px;
+    }
+}
+
+.donate {
+    display: flex;
+    justify-content: center;
+    padding: 276px 0 60px;
+    background: url("../../../assets/images/animal-panda-bg.jpg") no-repeat center / cover;
+}
+
+@media (max-width: 1599px) {
+    .footer__wrapper {
+        padding-left: 0;
+    }
+
+    .footer__top {
+        padding-right: 32px;
+    }
+
+    .footer__social {
+        margin-right: 117px;
+    }
+}
+
+@media (max-width: 999px) {
+    .donate {
+        padding: 199px 0 34px;
+    }
+
+    .footer__social {
+        margin-right: 0;
+    }
+
+    .footer__link {
+        margin: 32px 0 57px;
+    }
+}
+
+@media (max-width: 639px) {
+    .donate {
+        padding: 156px 0 10px;
+        background: url("../../../assets/images/animal-panda-bg.jpg") no-repeat left 26% bottom 64% / 400%;
+    }
+
+    .footer__top {
+        padding-right: 0;
+    }
+
+    .footer__social {
+        margin-right: 0;
+    }
+
+    .footer__link {
+        margin: 0 0 130px;
+    }
+}

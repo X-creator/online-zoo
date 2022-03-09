@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Zoo</title>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 class="main-heading">PetStory Online</h1>
+<header class="header">
+    <div class="header-wrapper container">
+        <a class="logo__link" href="../../index.html">PetStory <span class="logo__link-icon">online</span></a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../../index.html">About</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link active">Map</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="../zoos/panda/panda.html">Zoos</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="#">Contact us</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed
+                        by ©</a>
+                </li>
+            </ul>
+            <button class="nav__btn" type="button"><span class="nav__btn-menu"></span></button>
+        </nav>
+    </div>
+</header>
+<section class="map">
+    <div class="map-bg__wrapper">
+        <div class="map-bg">
+            <a class="map-animals__item-1" href="../zoos/eagle/eagle.html">
+                <img class="map-animals__img" src="../../assets/images/map-eagle1.png" alt="">
+            </a>
+            <a class="map-animals__item-2 map-animals-pin" href="../zoos/eagle/eagle.html">
+                <img class="map-animals__img" src="../../assets/images/map-eagle2.png" alt="">
+            </a>
+            <div class="map-animals__tooltip map-animals__tooltip-1">
+                <p class="map-animals__tooltip-text">Eagles <br> Los Angeles, USA</p>
+                <a class="map-animals__tooltip-link" href="../zoos/eagle/eagle.html">Watch online</a>
+            </div>
+            <a class="map-animals__item-3 map-animals-pin" href="../zoos/alligator/alligator.html">
+                <img class="map-animals__img" src="../../assets/images/map-alligator.png" alt="">
+            </a>
+            <div class="map-animals__tooltip map-animals__tooltip-2">
+                <p class="map-animals__tooltip-text">Alligators <br> Florida, USA</p>
+                <a class="map-animals__tooltip-link" href="../zoos/alligator/alligator.html">Watch online</a>
+            </div>
+            <a class="map-animals__item-4 map-animals-pin" href="../zoos/gorilla/gorilla.html">
+                <img class="map-animals__img" src="../../assets/images/map-gorilla.png" alt="">
+            </a>
+            <div class="map-animals__tooltip map-animals__tooltip-3">
+                <p class="map-animals__tooltip-text">Gorillas <br> Congo, Africa</p>
+                <a class="map-animals__tooltip-link" href="../zoos/gorilla/gorilla.html">Watch online</a>
+            </div>
+            <a class="map-animals__item-5 map-animals-pin" href="../zoos/panda/panda.html">
+                <img class="map-animals__img" src="../../assets/images/map-panda.png" alt="">
+            </a>
+            <a class="map-animals__item-6 map-animals-pin" href="../zoos/panda/panda.html">
+                <img class="map-animals__img" src="../../assets/images/map-pandas.png" alt="">
+            </a>
+            <div class="map-animals__tooltip map-animals__tooltip-4">
+                <p class="map-animals__tooltip-text">Pandas <br> China, Asia</p>
+                <a class="map-animals__tooltip-link" href="../zoos/panda/panda.html">Watch online</a>
+            </div>
+        </div>
+    </div>
+    <div class="map-control">
+        <div class="map-control__btn-wrapper">
+            <button class="map-control__btn map-control__scale-up">
+                <svg class="map-control__btn-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                     viewBox="0 0 32 32"
+                     fill="#333B41">
+                    <path d="M16 0a3 3 0 0 0-3 3v10H3a3 3 0 1 0 0 6h10v10a3 3 0 1 0 6 0V19h10a3 3 0 1 0 0-6H19V3a3 3 0 0 0-3-3z"/>
+                </svg>
+            </button>
+            <button class="map-control__btn map-control__scale-down">
+                <svg class="map-control__btn-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="6"
+                     viewBox="0 0 32 6"
+                     fill="#333B41">
+                    <path fill-rule="evenodd"
+                          d="M3.131 6h25.692C30.573 6 32 4.642 32 3.022 32 1.358 30.573 0 28.823 0H3.131C1.427 0 0 1.358 0 3.022 0 4.642 1.427 6 3.131 6z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer__wrapper container">
+        <div class="footer__top">
+            <a class="logo__link" href="../../index.html">PetStory <span class="logo__link-icon">online</span></a>
+            <form class="footer__subscribe">
+                <label class="footer__subscribe-label" for="email">Subscribe to our news</label>
+                <p class="footer__subscribe-input-wrapper">
+                    <input class="footer__subscribe-input" id="email" type="email" placeholder="Enter your email"
+                           required>
+                    <button class="footer__subscribe-btn">Submit</button>
+                </p>
+            </form>
+        </div>
+        <a class="footer__link main-link" href="../donate/donate.html">donate for volunteers</a>
+        <div class="footer__bottom">
+            <ul class="footer__social">
+                <li><a class="footer__social-link fb" href="https://www.facebook.com/">Facebook</a></li>
+                <li><a class="footer__social-link tw" href="https://twitter.com/">Twitter</a></li>
+                <li><a class="footer__social-link ig" href="https://www.instagram.com/">Instagram</a></li>
+                <li><a class="footer__social-link yt" href="https://www.youtube.com/">YouTube</a></li>
+            </ul>
+            <ul class="footer__nav">
+                <li><a class="footer__nav-link" href="../../index.html">About</a></li>
+                <li><a class="footer__nav-link active" href="#">Map</a></li>
+                <li><a class="footer__nav-link" href="../zoos/panda/panda.html">Zoos</a></li>
+                <li><a class="footer__nav-link" href="#">Contact us</a></li>
+            </ul>
+            <div class="footer__copyright">
+                <a class="footer__copyright-link"
+                   href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online">Designed by Alisa
+                    Samborskaya</a>
+                <a class="footer__copyright-link" href="https://rs.school/js/">©RSSchool & ©Yem Digital 2021</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="map.js"></script>
+</body>
+</html>
